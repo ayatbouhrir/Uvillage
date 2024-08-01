@@ -14,7 +14,8 @@
         <div class="col-md-6 col-lg-4">
             <div class="card shadow">
                 <div class="card-body">
-                    <h2 class="card-title text-center mb-4">Connexion</h2>
+                    <h2 class="card-title text-center mb-4">Connexion Uvillage </h2>
+                    <img src="assist/images/Uvillage.png"/>
                     <% if (session.getAttribute("loginError") != null) { %>
                         <div class="alert alert-danger" role="alert">
                             <%= session.getAttribute("loginError") %>

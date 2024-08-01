@@ -1,5 +1,5 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -14,14 +14,13 @@
         <div class="col-md-6 col-lg-4">
             <div class="card shadow">
                 <div class="card-body">
-
-                    <h2 class="card-title text-center mb-4" >Login</h2>
+                    <h2 class="card-title text-center mb-4">Connexion Uvillage </h2>
+                    <img src="assist/images/Uvillage.png"/>
                     <% if (session.getAttribute("loginError") != null) { %>
-                    <div class="alert alert-danger" role="alert">
-                        <%= session.getAttribute("loginError") %>
-                    </div>
+                        <div class="alert alert-danger" role="alert">
+                            <%= session.getAttribute("loginError") %>
+                        </div>
                     <% } %>
-
                     <form action="login" method="post">
                         <div class="mb-3">
                             <label for="username" class="form-label">Nom d'utilisateur</label>

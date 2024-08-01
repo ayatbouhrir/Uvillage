@@ -64,7 +64,6 @@ public class login extends HttpServlet {
     }
 
 
-
     private void handleSuccessfulLogin(HttpServletRequest request, HttpServletResponse response, String email) throws IOException {
         HttpSession session = request.getSession();
         session.setAttribute(USER_SESSION_ATTRIBUTE, email);
