@@ -15,7 +15,12 @@
             <div class="card shadow">
                 <div class="card-body">
                     <h2 class="card-title text-center mb-4">Connexion</h2>
-                    <form action="/login" method="post">
+                    <% if (session.getAttribute("loginError") != null) { %>
+                        <div class="alert alert-danger" role="alert">
+                            <%= session.getAttribute("loginError") %>
+                        </div>
+                    <% } %>
+                    <form action="login" method="post">
                         <div class="mb-3">
                             <label for="username" class="form-label">Nom d'utilisateur</label>
                             <input type="text" class="form-control" id="username" name="username" required>
