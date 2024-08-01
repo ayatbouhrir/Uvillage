@@ -7,7 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
- le bas
+ le bas du page
 
 </body>
 </html>
