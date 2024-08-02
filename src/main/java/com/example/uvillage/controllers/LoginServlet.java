@@ -8,10 +8,6 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import org.springframework.web.context.WebApplicationContext;
-import org.springframework.web.context.support.WebApplicationContextUtils;
-
-import javax.servlet.ServletContext;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -25,17 +21,6 @@ public class LoginServlet extends HttpServlet {
 
     private DatabaseUtil databaseUtil;
 
-    @Override
-    public void init() throws ServletException {
-        super.init();
-        configureLogger();
-        WebApplicationContext context = WebApplicationContextUtils.getRequiredWebApplicationContext((ServletContext) getServletContext());
-        databaseUtil = context.getBean(DatabaseUtil.class);
-    }
-
-    private void configureLogger() {
-        logger.setLevel(Level.ALL);
-    }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
